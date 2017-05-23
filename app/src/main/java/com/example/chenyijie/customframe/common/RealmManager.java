@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.example.chenyijie.customframe.bean.ViewInfo;
-import com.example.chenyijie.customframe.database.DBViewData;
 import com.example.chenyijie.customframe.database.DBViewInfo;
 
 import java.util.ArrayList;
@@ -54,24 +53,24 @@ public class RealmManager {
         return (currentIdNum == null)? 0 : currentIdNum.intValue() + 1;
     }
 
-
-    public void createNewData(final List<ViewInfo> viewInfos){
-        realm.executeTransaction(new Realm.Transaction() {
-            @Override
-            public void execute(Realm realm) {
-                DBViewData dbViewData = realm.createObject(DBViewData.class, MyApp.getInstance().getCurrentDate());
-                List<DBViewInfo> dbViewInfos = new ArrayList<DBViewInfo>();
-                for(ViewInfo viewInfo : viewInfos){
-                    DBViewInfo dbViewInfo = getDBViewInfoFromViewInfo(viewInfo);
-                    dbViewInfos.add(dbViewInfo);
-                }
-
-                dbViewData.setDBViewInfos(dbViewInfos);
-
-                realm.copyToRealmOrUpdate(dbViewData);
-            }
-        });
-    }
+//
+//    public void createNewData(final List<ViewInfo> viewInfos){
+//        realm.executeTransaction(new Realm.Transaction() {
+//            @Override
+//            public void execute(Realm realm) {
+//                DBViewData dbViewData = realm.createObject(DBViewData.class, MyApp.getInstance().getCurrentDate());
+//                List<DBViewInfo> dbViewInfos = new ArrayList<DBViewInfo>();
+//                for(ViewInfo viewInfo : viewInfos){
+//                    DBViewInfo dbViewInfo = getDBViewInfoFromViewInfo(viewInfo);
+//                    dbViewInfos.add(dbViewInfo);
+//                }
+//
+//                dbViewData.setDBViewInfos(dbViewInfos);
+//
+//                realm.copyToRealmOrUpdate(dbViewData);
+//            }
+//        });
+//    }
 
     /**
      * 新增
