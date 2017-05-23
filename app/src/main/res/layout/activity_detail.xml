@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <LinearLayout
+        android:id="@+id/detail_content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@android:color/holo_red_light">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/detail_title_text_size"
+                android:gravity="center" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_image_height"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_title_height"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/detail_title_text_size"
+            android:text="@string/unknow_data" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- 類別 -->
+                <TextView
+                    android:id="@+id/detail_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/detail_title_text_size"
+                    android:textColor="@android:color/black"
+                    android:text="@string/unknow_data"/>
+
+                <!-- 總評 -->
+                <TextView
+                    android:id="@+id/detail_average_rating_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/detail_other_text_size"
+                    android:textColor="@android:color/black"/>
+
+                <RatingBar
+                    android:id="@+id/detail_average_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:isIndicator="true"
+                    style="@style/CustomRatingStar"/>
+
+                <!-- 個評 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/detail_other_text_size"
+                    android:text="@string/detail_personal_rating"
+                    android:textColor="@android:color/black"/>
+
+                <RatingBar
+                    android:id="@+id/detail_personal_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:isIndicator="true"
+                    style="@style/CustomRatingStar"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- 均消 -->
+                <TextView
+                    android:id="@+id/detail_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/detail_other_text_size"
+                    android:textColor="@android:color/black"
+                    android:text="@string/unknow_data"/>
+
+                <!-- 營業時間 -->
+                <TextView
+                    android:id="@+id/detail_activie_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/detail_other_text_size"
+                    android:textColor="@android:color/black"
+                    android:text="@string/unknow_data"/>
+
+                <!-- 公休日 -->
+                <TextView
+                    android:id="@+id/detail_rest_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/detail_other_text_size"
+                    android:textColor="@android:color/black"
+                    android:text="@string/unknow_data"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 電話 -->
+        <TextView
+            android:id="@+id/detail_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detail_other_text_size"
+            android:textColor="@android:color/black"
+            android:text="@string/unknow_data"/>
+
+        <!-- 地址 -->
+        <TextView
+            android:id="@+id/detail_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detail_other_text_size"
+            android:textColor="@android:color/black"
+            android:text="@string/unknow_data"/>
+
+        <!-- google map -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/detail_map_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:background="@android:color/transparent">
+
+                <TextView
+                    android:id="@+id/map_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/detail_map_text_size"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+        <!--<fragment-->
+            <!--android:id="@+id/map"-->
+            <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/detail_map_height" />-->
+
+        <!-- 周邊 -->
+        <HorizontalScrollView
+            android:id="@+id/periphery_layout_scroll_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/detail_periphery_height"
+            android:layout_gravity="center"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/periphery_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</ScrollView>

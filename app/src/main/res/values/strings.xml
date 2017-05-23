@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">鉅碼科技</string>
+    <string name="unknow_data">沒有資料</string>
+    <string name="periphery">附近</string>
+    <string name="view_info">景點資訊</string>
+    <string name="loading_from_network_success">資料讀取成功</string>
+    <string name="loading_from_network_fail">資料讀取失敗</string>
+    <string name="category_government">政府單位</string>
+    <string name="category_viewpoint">景點</string>
+    <string name="category_amusement_park">遊樂園</string>
+
+    <string name="selection_distance_three">3km</string>
+    <string name="selection_distance_five">5km</string>
+    <string name="selection_distance_ten">10km</string>
+    <string name="selection_category_viewpoint">景點</string>
+    <string name="selection_category_government">政府單位</string>
+    <string name="selection_category_amusement_park">遊樂園</string>
+    <string name="selection_order_distance">距離</string>
+    <string name="selection_order_rating">評比</string>
+    <string name="no_periphery_views">周圍沒有可供前往的景點</string>
+
+    <string name="adapter_cost">均消 %d 元</string>
+    <string name="adapter_comment">%d 評</string>
+    <string name="adapter_distance">%d 公尺</string>
+
+    <string name="detail_phone_num">3345678</string>
+    <string name="detail_cost">均消    NT$ %d</string>
+    <string name="detail_rest_day">公休日：每一天</string>
+    <string name="detail_active_time">營業時間：09:00\n至\n21:00</string>
+    <string name="detail_average_rating_title">綜合評分( %d 評) </string>
+    <string name="detail_personal_rating">我的評分</string>
+    <string name="detail_distance">距離: %d 公尺</string>
+
+    <string name="main_toolbar_title">附近</string>
+    <string name="detail_toolbar_title">店家資訊</string>
+
+    <string name="menu_item_home">返回主頁</string>
+    <string name="menu_item_ignore">忽略</string>
+    <string name="menu_item_navigation">導航</string>
+    <string name="menu_item_back">回上一頁</string>
+    <string name="menu_item_favorite">最愛</string>
+    <string name="menu_item_booked">收藏</string>
+
+</resources>

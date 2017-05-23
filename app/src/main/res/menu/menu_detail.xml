@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/detail_menu_book"
+        android:title="@string/menu_item_booked"
+        android:icon="@drawable/collection_normal"
+        android:orderInCategory="20"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/detail_menu_favorite"
+        android:title="@string/menu_item_favorite"
+        android:icon="@drawable/favorite_notadded"
+        android:orderInCategory="30"
+        app:showAsAction="ifRoom"/>
+
+</menu>
